@@ -8,7 +8,7 @@ on:
 jobs:
   set_vars:
     name: Set Vars
-    runs-on: ubuntu-latest-kong
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     env:
       REF_NAME: ${{ github.ref_name }}
       RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
@@ -35,7 +35,7 @@ jobs:
         echo "TAG_VERSION=$TAG_VERSION" >> "$GITHUB_OUTPUT"
   add_release_to_pongo:
     name: Add Release to Pongo
-    runs-on: ubuntu-latest-kong
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     needs:
     - set_vars
     env:
