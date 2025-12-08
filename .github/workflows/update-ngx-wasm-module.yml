@@ -8,7 +8,7 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-22.04
+    runs-on: blacksmith-4vcpu-ubuntu-2204
 
     permissions:
       # required to create a branch and push commits

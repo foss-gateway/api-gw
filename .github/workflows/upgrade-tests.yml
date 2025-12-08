@@ -35,7 +35,7 @@ jobs:
 
   upgrade-test:
     name: Run migration tests
-    runs-on: ubuntu-22.04
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     needs: build
 
     steps:
