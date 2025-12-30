@@ -26,13 +26,13 @@ end
 local _ACLs = {}
 
 
-function _ACLs:post_crud_event(operation, entity, options)
+function _ACLs:post_crud_event(operation, entity, old_entity, options)
   local _, err, err_t = invalidate_cache(self, entity, options)
   if err then
     return nil, err, err_t
   end
 
-  return self.super.post_crud_event(self, operation, entity, options)
+  return self.super.post_crud_event(self, operation, entity, old_entity, options)
 end
 
 
